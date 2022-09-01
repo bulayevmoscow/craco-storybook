@@ -18,9 +18,17 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "paths": {
+      "@ui/*": ["src/stories/*"]
+    }
   },
   "include": [
-    "src"
+    "src",
+    "src/stories/**/*.tsx"
+  ],
+  "exclude": [
+    "src/stories"
   ]
+
 }
