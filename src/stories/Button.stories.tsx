@@ -1,8 +1,10 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { Button } from './Button';
+import { Button } from '@ui/kek/src/stories/Button';
 
+
+// const Button:React.FC = () => <h1>hi!</h1>
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
   title: 'Example/Button',
@@ -14,28 +16,10 @@ export default {
 } as ComponentMeta<typeof Button>;
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
-
-export const Primary = Template.bind({});
-// More on args: https://storybook.js.org/docs/react/writing-stories/args
-Primary.args = {
-  primary: true,
-  label: 'Button',
-};
+// @ts-ignore
+const Template: ComponentStory<typeof Mock> = (args) => <Button {...args} />;
 
 export const Secondary = Template.bind({});
-Secondary.args = {
-  label: 'Button',
-};
 
-export const Large = Template.bind({});
-Large.args = {
-  size: 'large',
-  label: 'Button',
-};
-
-export const Small = Template.bind({});
-Small.args = {
-  size: 'small',
-  label: 'Button',
-};
+// INFO
+// https://www.google.com/search?q=Is+this+the+principal+call+to+action+on+the+page%3F+import+components+from+node_modules&oq=Is+this+the+principal+call+to+action+on+the+page%3F+import+components+from+node_modules&aqs=chrome..69i57j69i64.11518j0j4&sourceid=chrome&ie=UTF-8
